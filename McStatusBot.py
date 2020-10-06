@@ -5,14 +5,14 @@ from pyrogram import Client
 
 bot = Client(
     "McStatusBot",
-    api_id=0,
+    api_id=,
     api_hash="",
     bot_token=""
 )
 
 @bot.on_inline_query()
 async def answer(_, inline_query):
-    server = MinecraftServer(inline_query.query, 25565)
+    server = MinecraftServer(inline_query.query)
     status = server.status()
     await inline_query.answer(
         results=[
@@ -22,6 +22,8 @@ async def answer(_, inline_query):
                     f'Players: {status.players.online}/{status.players.max}\n'
                     f'Ping: {status.latency}\n'
                     f'Description: {status.description}\n'
+                    f'Version: {status.version.name}\n'
+                    f'Protocol: {status.version.protocol}\n'
                     '@LoadingProject'
                 ),
                 description="Check some information about a Mc Java server"
