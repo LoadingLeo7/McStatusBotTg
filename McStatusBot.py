@@ -21,7 +21,8 @@ async def answer(_, inline_query):
                 input_message_content=InputTextMessageContent(
                     f'Players: {status.players.online}/{status.players.max}\n'
                     f'Ping: {status.latency}\n'
-                    f'Description: {status.description}\n"@LoadingProject"'
+                    f'Description: {status.description}\n'
+                    '@LoadingProject'
                 ),
                 description="Check some information about a Mc Java server"
             ),
