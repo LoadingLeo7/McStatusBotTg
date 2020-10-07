@@ -5,9 +5,9 @@ from pyrogram import Client
 
 bot = Client(
     "McStatusBot",
-    api_id=,
-    api_hash="",
-    bot_token=""
+    api_id=, #add your api_id 
+    api_hash="", #add your api_hash
+    bot_token="" #add your bot_token
 )
 
 @bot.on_inline_query()
