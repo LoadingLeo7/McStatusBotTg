@@ -1,11 +1,13 @@
 # McStatusBotTg
-Check some information about a mc java server on telegram
+Get some infos about an MC Java Server on Telegram
 
-Requirements:
+## Get started
+- Install Pyrogram with `python -m pip install pyrogram tgcrypto`
+- Install McStatus with `python -m pip install McStatus`
+- Run the bot with `python3 McStatusBot.py`
 
-Install Pyrogram with " $ python -m pip install pyrogram tgcrypto "
+## Official Bot
+An instance of the Bot is running [here](https://t.me/McStatusRobot) *(No uptime is guaranteed tho)*
 
-Install McStatus " $ python -m pip install McStatus "
-
-if you have some problems contact @loadingleo on telegram
-
+## Get support
+- By contacting [the Dev](https://t.me/Loadingleo) on Telegram
