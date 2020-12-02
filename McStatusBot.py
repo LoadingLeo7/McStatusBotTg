@@ -23,8 +23,6 @@ async def answer(_, inline_query):
                     f'Ping: {status.latency}\n'
                     f'Description: {status.description}\n'
                     f'Version: {status.version.name}\n'
-                    f'Protocol: {status.version.protocol}\n'
-                    '@LoadingProject'
                 ),
                 description="Check some information about a Mc Java server"
             ),
