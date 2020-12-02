@@ -1,13 +1,13 @@
+from pyrogram import Client
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
 from mcstatus import MinecraftServer
-from pyrogram import Client
 
 
 bot = Client(
     "McStatusBot",
-    api_id=, #add your api_id 
-    api_hash="", #add your api_hash
-    bot_token="" #add your bot_token
+    api_id=,
+    api_hash="",
+    bot_token=""
 )
 
 @bot.on_inline_query()
@@ -17,14 +17,15 @@ async def answer(_, inline_query):
     await inline_query.answer(
         results=[
             InlineQueryResultArticle(
-                title="Check status of minecraft server",
+                title="⛏ Check the status of a Minecraft Java Server",
                 input_message_content=InputTextMessageContent(
-                    f'Players: {status.players.online}/{status.players.max}\n'
-                    f'Ping: {status.latency}\n'
-                    f'Description: {status.description}\n'
-                    f'Version: {status.version.name}\n'
+                    f'👥 <b>Players</b>: <code>{status.players.online}/{status.players.max}</code>\n'
+                    f'📶 <b>Ping</b>: <code>{status.latency} ms</code>\n'
+                    f'💭 <b>MOTD</b>: <code>{status.description}</code>\n'
+                    f'Ⓜ️ <b>Game Version</b>: <code>{status.version.name}</code>\n'
+                    f'🖥 <b>Protocol Version</b>: <code>{status.version.protocol}</code>\n'
                 ),
-                description="Check some information about a Mc Java server"
+                description="ℹ️ Get some infos about an MC Java Server"
             ),
         ],
         cache_time=1
